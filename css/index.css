@@ -1,0 +1,206 @@
+html {
+  font-size: 17px;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+#container {
+  height: 100vh;
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color:#f1e2c4;
+}
+
+
+/* header */
+#info {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/backgroud.jpg");
+  height: 30%;
+  background-color: #011b3e;
+  position: relative;
+  text-align: center;
+}
+
+#info .avatar {
+  border-radius: 50%;
+  content: url("../img/avatar.jpg");
+  position: absolute;
+  margin-left:auto;
+  margin-right:auto;
+  left:0;
+  right:0;
+  bottom: -20%;
+  height: 80%;
+}
+
+
+/* listProduct */
+#listProduct {
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 70%;
+  background-color: #f2b705;
+}
+
+#listProduct .course {
+  color: #da5032;
+  margin-bottom: 5%;
+}
+
+#listProduct .card {
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+#listProduct .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#listProduct .container {
+  padding: 2px 16px;
+}
+
+#listProduct .flipCardFront img{
+  height: 100%;
+  width: 100%;
+}
+
+.productName {
+  position:absolute;
+  margin-left:auto;
+  margin-right:auto;
+  left:0;
+  right:0;
+  bottom: 5%;
+  position: absolute;
+  color: #f1e2c4;
+  font-size: 20pt;
+}
+
+
+/* style */
+
+.flipCard {
+  display: inline-block;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flipCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flipCard:hover .flipCardInner {
+  transform: rotateY(180deg);
+}
+
+.flipCardFront, .flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipCardFront {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipCardBack {
+  padding: 5%;
+  background-color: #da8e04;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.listIconLink {
+  position: absolute;
+  bottom: 10%;
+  margin-left:auto;
+  margin-right:auto;
+  left:0;
+  right:0;
+}
+
+.iconLink img{
+  width: 15%;
+  height: 15%;
+}
+
+@media screen and (max-width: 2000px) {
+  /* header */
+  #info {
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/backgroud.jpg");
+    height: 30%;
+    background-color: #011b3e;
+    position: relative;
+    text-align: center;
+  }
+
+  #info .avatar {
+    border-radius: 50%;
+    content: url("../img/avatar.jpg");
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    bottom: -20%;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 481px) {
+  /* header */
+  #info {
+    height: 15%;
+  }
+
+  #info .avatar {
+    border-radius: 50%;
+    content: url("../img/avatar.jpg");
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+    bottom: -20%;
+    height: 80%;
+  }
+}
